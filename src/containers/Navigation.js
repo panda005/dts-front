@@ -1,8 +1,8 @@
 import React from 'react'
 import {Nav, NavMenu, NavItem} from '../components/Nav'
 import HomePage from './Home'
-import Analyze from '../components/Analyze/Analyze'
-import Debug from '../components/Debug/Debug'
+import Analyze from '../components/analyze/Analyze'
+import Debug from '../components/debug/Debug'
 
 export default class PageNav extends React.Component {
     render() {
