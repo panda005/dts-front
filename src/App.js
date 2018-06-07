@@ -3,6 +3,8 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Header, {HeaderLogo, HeaderUserPanel} from './components/Headers';
 import PageNav, { routes } from './containers/Navigation'
 
+import 'react-select2-wrapper/css/select2.css';
+
 class App extends Component {
   render() {
     return (
