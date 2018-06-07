@@ -4,6 +4,17 @@ import Header, {HeaderLogo, HeaderUserPanel} from './components/Headers';
 import PageNav, { routes } from './containers/Navigation'
 
 class App extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          isLoading: false
+      }
+  }
+
+  componentDidMount() {
+      this.setState({isLoading: true});
+  }
+
   render() {
     return (
       <Router>
