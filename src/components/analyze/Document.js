@@ -1,21 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Field from "./Field"
+import "./Document.css";
 
-export default class Document extends React.Component {
-    static propTypes = {
-        fieldName: PropTypes.string.isRequired,
-        fieldValue: PropTypes.string,
-    }
+const Document = ({fields}) => {
 
-    static defaultProps = {
-        fieldValue: ''
-    }
+    const elems = fields.map((f, i) => {
+        if (f) {
+            const {inputFieldName, input, type, analyzer} = f;
+            return (<Field key={i} name={inputFieldName} value={input} analyzer={analyzer} type={type} />)
+        }
+    });
 
-    render() {
-        return (
-            <div className="document">
-            <p>{this.fieldName} : {this.fieldValue}</p>
-            </div>
-        )
-    }
+    return (
+        <ul className="FieldList">
+            {elems}
+        </ul>
+    );
 };
+
+export default Document;
