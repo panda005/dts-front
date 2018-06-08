@@ -1,15 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './components/App'
+import storeFactory from './store'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'admin-lte/dist/css/AdminLTE.min.css';
-import 'admin-lte/dist/css/skins/skin-blue.min.css';
-import 'font-awesome/css/font-awesome.css';
+const store = storeFactory()
 
-document.body.classList.add("skin-blue");
-document.body.classList.add("sidebar-mini");
+window.React = React
+window.store = store
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+)
