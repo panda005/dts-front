@@ -13,8 +13,8 @@ const QueryForm = ( { collection, docid, OnDocId=f=>f } ) => {
     const submit = e => {
         e.preventDefault()
         OnDocId(_collection.value, _docid.value)
-        _collection.value = ''
-        _docid.value = ''
+        _collection.value = collection
+        _docid.value = docid
         _collection.focus()
     }
 
