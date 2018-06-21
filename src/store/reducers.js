@@ -6,7 +6,7 @@ export const reducer_query =  (state = "", action) => {
         case C.QUERY_DOCUMENT:
              fetch("http://dts-api.dev.9rum.cc/v1/collection/" + action.collection + "/document/" + action.docid + "/analyze.json?aggr=true")
                 .then(response => response.json())
-                .then(json => action.dispatch(resultDocument(JSON.stringify(json))))
+                .then(json => action.store.dispatch(resultDocument(JSON.stringify(json))))
             return {
                 "collection" : action.collection,
                 "docid" : action.docid

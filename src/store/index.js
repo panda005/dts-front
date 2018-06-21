@@ -15,7 +15,7 @@ const logger = store => next => action => {
 }
 
 const dispatchAdder = store => next => action => {
-    action.dispatch = store.dispatch
+    action.store = store
     return next(action)
 }
 
