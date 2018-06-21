@@ -14,8 +14,13 @@ const logger = store => next => action => {
     return result
 }
 
+const dispatchAdder = store => next => action => {
+    action.dispatch = store.dispatch
+    return next(action)
+}
+
 const storeFactory = (initialState={}) =>
-    applyMiddleware(logger)(createStore)(
+    applyMiddleware(logger, dispatchAdder)(createStore)(
         combineReducers({reducer_query, reducer_view}),
         initialState
     )

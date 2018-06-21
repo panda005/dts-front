@@ -1,13 +1,12 @@
 import C from './constants'
 
 
-export const queryDocument = (collection, docid, disp) =>
+export const queryDocument = (collection, docid) =>
     ({
-    type: C.QUERY_DOCUMENT,
+        type: C.QUERY_DOCUMENT,
         collection,
-        docid,
-        disp
-})
+        docid
+    })
 
 
 export const resultDocument = (json) =>

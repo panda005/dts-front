@@ -1,5 +1,5 @@
-import { connect } from 'react-redux'
-import { queryDocument } from '../actions'
+import {connect} from 'react-redux'
+import {queryDocument} from '../actions'
 import DocumentView from './ui/DocumentView'
 import QueryForm from './ui/QueryForm'
 
@@ -15,7 +15,7 @@ export const Query = connect(
     dispatch =>
         ({
             OnDocId(collection, docid) {
-                dispatch(queryDocument(collection, docid, dispatch))
+                dispatch(queryDocument(collection, docid))
             }
         })
 )(QueryForm)
