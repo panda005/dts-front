@@ -17,7 +17,7 @@ const logger = store => next => action => {
 const storeFactory = (initialState={}) =>
     applyMiddleware(logger)(createStore)(
         combineReducers({reducer_query, reducer_view}),
-            {}
+        initialState
     )
 
 export default storeFactory
