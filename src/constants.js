@@ -1,6 +1,9 @@
 const constants = {
     QUERY_DOCUMENT: "QUERY_DOCUMENT",
     VIEW_DOCUMENT: "VIEW_DOCUMENT",
+
+    QUERY_COLLECTION: "QUERY_COLLECTION",
+    VIEW_COLLECTION: "VIEW_COLLECTION",
 }
 
 export default constants
