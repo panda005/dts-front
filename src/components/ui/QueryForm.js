@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import {queryCollection} from '../../actions'
+//import {queryCollection} from '../../actions'
 
 export default class QueryForm extends Component  {
 
@@ -18,13 +18,10 @@ export default class QueryForm extends Component  {
         const submit = e => {
             e.preventDefault()
             OnDocId(_collection.value, _docid.value)
-            _collection.value = collection
-            _docid.value = docid
+            // _collection.value = collection
+            // _docid.value = docid
             _collection.focus()
         }
-
-        const {store} = this.context
-        console.log(store)
 
         return (
             <form className="doc-id" onSubmit={submit}>

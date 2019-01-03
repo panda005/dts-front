@@ -16,6 +16,7 @@ export const Query = connect(
         ({
             OnDocId(collection, docid) {
                 dispatch(queryDocument(collection, docid))
+                //queryDocument(collection, docid)(dispatch)
             }
         })
 )(QueryForm)
