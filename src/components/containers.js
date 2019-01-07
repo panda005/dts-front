@@ -5,13 +5,7 @@ import QueryForm from './ui/QueryForm'
 
 
 export const Query = connect(
-    state =>
-        (
-            {
-                collection: state.collection,
-                docid: state.docid
-            }
-        ),
+    null,
     dispatch =>
         ({
             OnDocId(collection, docid) {
@@ -30,12 +24,5 @@ export const View = connect(
                 //...state.reducer_view
             }
         ),
-    /*
-    dispatch =>
-        ({
-                OnChanged() {
-                }
-            })
-            */
     null
 )(DocumentView)
