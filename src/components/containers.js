@@ -2,6 +2,7 @@ import {connect} from 'react-redux'
 import {queryDocument} from '../actions'
 import DocumentView from './ui/DocumentView'
 import QueryForm from './ui/QueryForm'
+import {reducer_view} from "../store/reducers";
 
 
 export const Query = connect(
