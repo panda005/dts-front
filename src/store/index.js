@@ -1,5 +1,5 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux'
-import {reducer_query, reducer_view} from './reducers'
+import {applyMiddleware, combineReducers, createStore} from 'redux'
+import {reducer_view} from './reducers'
 import thunk from 'redux-thunk'
 
 const logger = store => next => action => {
@@ -21,7 +21,7 @@ const logger = store => next => action => {
 
 const storeFactory = (initialState = {}) =>
     applyMiddleware(logger, /*dispatchAdder,*/ thunk)(createStore)(
-        combineReducers({reducer_query, reducer_view}),
+        combineReducers({reducer_view}),
         initialState
     )
 

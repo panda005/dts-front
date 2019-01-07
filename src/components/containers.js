@@ -8,8 +8,8 @@ export const Query = connect(
     state =>
         (
             {
-                collection: state.reducer_query.collection,
-                docid: state.reducer_query.docid
+                collection: state.collection,
+                docid: state.docid
             }
         ),
     dispatch =>
